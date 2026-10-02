@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>황촌 마을호텔 숙소 안내</title>
+<meta name="description" content="경주 황오동·성동 일대 행복황촌협동조합 마을호텔 34개 숙소 안내 페이지">
+<meta property="og:title" content="황촌 마을호텔 숙소 안내">
+<meta property="og:description" content="경주 황오동·성동 일대 행복황촌협동조합 마을호텔 34개 숙소 안내 페이지">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70'%3E%3Cpath d='M6 52 L50 18 L94 52' stroke='%23B5502E' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 52 L50 26 L84 52' stroke='%23B5502E' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F7F3EC;
+    --surface:#FFFFFF;
+    --surface-2:#FBF8F2;
+    --text:#2B2420;
+    --text-muted:#6B6258;
+    --accent:#B5502E;
+    --accent-ink:#FFFFFF;
+    --accent-2:#3F5C48;
+    --accent-2-ink:#FFFFFF;
+    --border:#E3DACD;
+    --shadow: 0 1px 2px rgba(43,36,32,.06), 0 6px 20px rgba(43,36,32,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1714;
+      --surface:#241F1A;
+      --surface-2:#2C2620;
+      --text:#EFE8DC;
+      --text-muted:#B2A593;
+      --accent:#E2835A;
+      --accent-ink:#241507;
+      --accent-2:#7BC196;
+      --accent-2-ink:#0F1F15;
+      --border:#3A322A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1714;
+    --surface:#241F1A;
+    --surface-2:#2C2620;
+    --text:#EFE8DC;
+    --text-muted:#B2A593;
+    --accent:#E2835A;
+    --accent-ink:#241507;
+    --accent-2:#7BC196;
+    --accent-2-ink:#0F1F15;
+    --border:#3A322A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+    padding:0 20px;
+  }
+  a{color:inherit;}
+  h1,h2,h3{text-wrap:balance; font-family:"Gowun Batang",serif; margin:0;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding-block:40px 80px;}
+
+  header.page-head{
+    display:flex; flex-direction:column; gap:10px;
+    padding-bottom:28px; margin-bottom:28px;
+    border-bottom:1px solid var(--border);
+  }
+  .eyebrow{
+    font-size:.8rem; font-weight:600; letter-spacing:.08em;
+    color:var(--accent-2); text-transform:uppercase;
+  }
+  h1{font-size:clamp(2rem, 4vw, 2.8rem); font-weight:700; line-height:1.25;}
+  .subtitle{
+    color:var(--text-muted); font-size:1rem; line-height:1.7; max-width:640px;
+  }
+  .stat-row{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;
+  }
+  .stat-chip{
+    font-size:.85rem; color:var(--text-muted);
+    background:var(--surface-2); border:1px solid var(--border);
+    border-radius:999px; padding:6px 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-chip b{color:var(--text); font-weight:700;}
+
+  .progress-note{
+    display:flex; gap:12px; align-items:flex-start;
+    background:var(--surface-2); border:1px solid var(--border);
+    border-left:3px solid var(--accent-2);
+    border-radius:10px; padding:14px 16px; margin-bottom:28px;
+    font-size:.9rem; color:var(--text-muted); line-height:1.6;
+  }
+  .progress-note strong{color:var(--text);}
+
+  .controls{
+    display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+    margin-bottom:24px;
+  }
+  .search-box{
+    flex:1 1 220px;
+    display:flex; align-items:center; gap:8px;
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:10px; padding:10px 14px;
+  }
+  .search-box svg{flex:none; color:var(--text-muted);}
+  .search-box input{
+    border:none; outline:none; background:none; color:var(--text);
+    font-family:inherit; font-size:.95rem; width:100%;
+  }
+  .search-box input::placeholder{color:var(--text-muted);}
+
+  .chip-group{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    border:1px solid var(--border); background:var(--surface);
+    color:var(--text-muted);
+    border-radius:999px; padding:7px 14px; font-size:.85rem;
+    font-family:inherit; cursor:pointer; transition:background .15s, color .15s, border-color .15s;
+  }
+  .chip:hover{border-color:var(--accent-2);}
+  .chip[aria-pressed="true"]{
+    background:var(--accent-2); color:var(--accent-2-ink); border-color:var(--accent-2); font-weight:600;
+  }
+
+  .section-label{
+    font-size:.8rem; color:var(--text-muted); font-weight:600;
+    letter-spacing:.04em; margin-bottom:8px; margin-top:2px;
+  }
+  .filters-block{display:flex; flex-direction:column; gap:14px; margin-bottom:28px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:20px;
+  }
+
+  .card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:14px; overflow:hidden; box-shadow:var(--shadow);
+    display:flex; flex-direction:column;
+  }
+  .card-photo{
+    position:relative; aspect-ratio:4/3; background:var(--surface-2);
+    border-bottom:1px solid var(--border);
+    display:flex; gap:2px; overflow:hidden;
+  }
+  .card-photo.empty{align-items:center; justify-content:center;}
+  .photo-slot{flex:1 1 0; min-width:0; position:relative; overflow:hidden;}
+  .photo-slot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;}
+  .card-photo svg{width:56%; height:56%; color:var(--border);}
+  .photo-caption{
+    position:absolute; bottom:8px; left:10px;
+    font-size:.7rem; color:var(--text-muted);
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:6px; padding:2px 8px;
+  }
+  .type-badge{
+    position:absolute; top:10px; left:10px;
+    font-size:.7rem; font-weight:700; letter-spacing:.02em;
+    background:var(--surface); color:var(--text);
+    border:1px solid var(--border);
+    border-radius:999px; padding:3px 10px;
+  }
+  .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .card-name{font-size:1.22rem; font-weight:700;}
+  .card-address{font-size:.85rem; color:var(--text-muted); line-height:1.5;}
+  .fact-row{
+    display:flex; flex-wrap:wrap; gap:8px 16px;
+    font-size:.85rem; color:var(--text); padding-top:2px;
+    border-top:1px solid var(--border);
+  }
+  .fact{display:flex; flex-direction:column; gap:2px;}
+  .fact .k{font-size:.72rem; color:var(--text-muted);}
+  .fact .v{font-weight:600; font-variant-numeric: tabular-nums;}
+  .card-actions{
+    display:flex; gap:8px; margin-top:auto; padding-top:6px;
+  }
+  .btn{
+    flex:1; text-align:center; text-decoration:none;
+    font-size:.85rem; font-weight:600; padding:9px 10px; border-radius:8px;
+    border:1px solid var(--border); color:var(--text); background:var(--surface-2);
+  }
+  .btn.primary{
+    background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+  }
+
+  .empty-state{
+    text-align:center; color:var(--text-muted); padding:60px 20px;
+    border:1px dashed var(--border); border-radius:14px; font-size:.95rem;
+  }
+
+  footer.page-foot{
+    margin-top:48px; padding-top:24px; border-top:1px solid var(--border);
+    font-size:.8rem; color:var(--text-muted); line-height:1.7;
+  }
+
+  @media (max-width:480px){
+    .wrap{padding-block:28px 56px;}
+    h1{font-size:1.7rem;}
+  }
+</style>
+
+<div class="wrap">
+  <header class="page-head">
+    <span class="eyebrow">행복황촌협동조합 · 마을호텔</span>
+    <h1>황촌 마을호텔 숙소 안내</h1>
+    <p class="subtitle">경주 황오동·성동 골목 곳곳에 흩어진 한옥과 독채가 하나의 호텔처럼 이어집니다. 조합원이 직접 운영하는 숙소를 소개합니다.</p>
+    <div class="stat-row">
+      <span class="stat-chip"><b id="stat-count">0</b> / 34개 숙소 등록됨</span>
+      <span class="stat-chip">경주 황오동 · 성동 일대</span>
+      <span class="stat-chip">조합원 직접 운영</span>
+    </div>
+  </header>
+
+  <div class="progress-note">
+    <span>
+      <strong>34곳 중 33곳의 사진이 등록되었습니다.</strong> 황오다움은 사진·예약 링크가 아직 도착하지 않아 기와지붕 아이콘으로 표시됩니다.
+    </span>
+  </div>
+
+  <div class="filters-block">
+    <div class="controls">
+      <label class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search" type="text" placeholder="숙소 이름, 주소로 검색" />
+      </label>
+    </div>
+    <div>
+      <div class="section-label">숙소유형</div>
+      <div class="chip-group" id="type-group"></div>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty-state" id="empty" hidden>조건에 맞는 숙소가 없습니다. 검색어나 필터를 조정해보세요.</div>
+
+  <footer class="page-foot">
+    행복황촌협동조합 · 경주시 황오동·성동 일대 마을호텔 &nbsp;·&nbsp; 요금은 조합에서 전달받은 자료 기준이며 변동될 수 있습니다. 정확한 예약은 각 숙소의 예약 페이지를 확인해주세요.
+  </footer>
+</div>
+
+<script>
+  const roofSVG = `<svg viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 52 L50 18 L94 52" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 52 L50 26 L84 52" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="50" y1="18" x2="50" y2="8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="20" y="52" width="60" height="3.5" fill="currentColor" opacity=".6"/>
+  </svg>`;
+
+  // 엑셀 '숙소목록' 시트에서 그대로 옮긴 실 데이터입니다.
+  const accommodations = [
+  {
+    "name": "블루플래닛",
+    "address": "경주시 원효로173번길 4-3",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 9,
+    "priceWeekday": 14,
+    "priceWeekend": 18,
+    "phone": "010-8687-0011",
+    "bookingUrl": "https://www.agoda.com/ko-kr/blueplanet/hotel/gyeongju-si-kr.html?cid=1719676&ds=e9F%2FCSQJNoMNTTU%2B",
+    "photos": [
+      "photos/acc03-1.jpg"
+    ]
+  },
+  {
+    "name": "스테이황촌",
+    "address": "경주시 양정로130번길 6-14",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 5,
+    "priceWeekday": 25,
+    "priceWeekend": 25,
+    "phone": "010-3827-5259",
+    "bookingUrl": "https://naver.me/xgNI1jpj",
+    "photos": [
+      "photos/hwangho-yeogwan-pool.png"
+    ]
+  },
+  {
+    "name": "황오여관",
+    "address": "경주시 원효로169번길 4-1",
+    "type": "철도관사",
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 33,
+    "priceWeekend": 50,
+    "phone": "010-8707-0679",
+    "bookingUrl": "https://naver.me/xhz3um5i",
+    "photos": [
+      "photos/stay-hwangchon-night.png"
+    ]
+  },
+  {
+    "name": "행복꿈자리",
+    "address": "경주시 양정로130번길 11",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 15,
+    "priceWeekend": 20,
+    "phone": "010-8570-1861",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1625146843198668909?guests=1&adults=1&s=67&unique_share_id=cbfe8689-7049-40c6-b7de-e1d7ee70e843",
+    "photos": [
+      "photos/acc04-1.jpg"
+    ]
+  },
+  {
+    "name": "게스트하우스희",
+    "address": "경주시 원효로177번길 18",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 6,
+    "priceWeekday": 12,
+    "priceWeekend": 20,
+    "phone": "010-6428-1279",
+    "bookingUrl": "https://naver.me/5eUPQrjF",
+    "photos": [
+      "photos/acc05-1.jpg"
+    ]
+  },
+  {
+    "name": "스테이마음",
+    "address": "경주시 원효로162번길 7-3",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 2,
+    "priceWeekday": 16,
+    "priceWeekend": 27,
+    "phone": "010-8670-0279",
+    "bookingUrl": "https://naver.me/FvEpQaJU",
+    "photos": [
+      "photos/acc06-1.jpg",
+      "photos/acc06-2.jpg"
+    ]
+  },
+  {
+    "name": "경주호가",
+    "address": "경주시 원효로173번길 4-1",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 4,
+    "priceWeekday": 20,
+    "priceWeekend": 25,
+    "phone": "010-5688-8650",
+    "bookingUrl": "https://naver.me/IGsJLCcv",
+    "photos": [
+      "photos/acc07-1.jpg"
+    ]
+  },
+  {
+    "name": "호경가",
+    "address": "경주시 양정로130번길 8-6",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 4,
+    "priceWeekday": 14,
+    "priceWeekend": 19,
+    "phone": "010-2628-9106",
+    "bookingUrl": "https://naver.me/FgHIfncf",
+    "photos": [
+      "photos/acc08-1b.jpg",
+      "photos/acc08-2b.jpg"
+    ]
+  },
+  {
+    "name": "스테이시인",
+    "address": "양정로104번길 15",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 12,
+    "priceWeekend": 27,
+    "phone": "010-2550-6540",
+    "bookingUrl": "https://naver.me/GOPEK6T3",
+    "photos": [
+      "photos/acc09-1c.jpg",
+      "photos/acc09-2c.jpg"
+    ]
+  },
+  {
+    "name": "소여정",
+    "address": "경주시 원효로 182-4",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 34,
+    "priceWeekend": 48,
+    "phone": "010-8263-2355",
+    "bookingUrl": "https://naver.me/FRLTDpmC",
+    "photos": [
+      "photos/acc10-1.jpg"
+    ]
+  },
+  {
+    "name": "스테이여진여몽",
+    "address": "경주시 원효로 182-9",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 36,
+    "priceWeekend": 42,
+    "phone": "010-9393-7374",
+    "bookingUrl": "https://naver.me/xvCUHclM",
+    "photos": [
+      "photos/acc11-1c.jpg"
+    ]
+  },
+  {
+    "name": "넥스트도어",
+    "address": "경주시 양정로107번길 16",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 8,
+    "priceWeekday": 30,
+    "priceWeekend": 40,
+    "phone": "010-6567-2868",
+    "bookingUrl": "https://naver.me/FfeF54SZ",
+    "photos": [
+      "photos/acc12-1.jpg"
+    ]
+  },
+  {
+    "name": "호텔프프",
+    "address": "경주시 원효로173번길 8-1",
+    "type": "철도관사",
+    "capacityBase": 2,
+    "capacityMax": 2,
+    "priceWeekday": 12,
+    "priceWeekend": 18,
+    "phone": "010-4487-1287",
+    "bookingUrl": "https://naver.me/GzE9RY9T",
+    "photos": [
+      "photos/acc13-1.jpg",
+      "photos/acc13-2.jpg"
+    ]
+  },
+  {
+    "name": "모모이황촌",
+    "address": "경주시 양정로 108-18",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 6,
+    "priceWeekday": 25,
+    "priceWeekend": 32,
+    "phone": "010-5606-4140",
+    "bookingUrl": "https://naver.me/xIeXIkhT",
+    "photos": [
+      "photos/acc14-1.jpg"
+    ]
+  },
+  {
+    "name": "스테이 경주182-6",
+    "address": "경주시 원효로 182-6",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 6,
+    "priceWeekday": 20,
+    "priceWeekend": 29,
+    "phone": "010-4516-4030",
+    "bookingUrl": "https://naver.me/G4W8wwkR",
+    "photos": [
+      "photos/acc15-1c.jpg"
+    ]
+  },
+  {
+    "name": "옥상1996",
+    "address": "경주시 양정로 150-1, 2층",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 18,
+    "priceWeekend": 24,
+    "phone": "010-7572-0932",
+    "bookingUrl": "https://naver.me/5659cKpP",
+    "photos": [
+      "photos/acc16-1.jpg",
+      "photos/acc16-2.jpg"
+    ]
+  },
+  {
+    "name": "황오다락",
+    "address": "경주시 원효로173번길 12-5",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 5,
+    "priceWeekday": 15,
+    "priceWeekend": 20,
+    "phone": "010-4649-5378",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1722152630386794905?check_in=2026-11-18&check_out=2026-11-19&guests=1&adults=1&s=67&unique_share_id=bd3e170e-8158-4daf-90ba-35b0be3f8e54",
+    "photos": [
+      "photos/acc17-1c.jpg"
+    ]
+  },
+  {
+    "name": "스테이류",
+    "address": "경주시 원효로177번길 22-9",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 5,
+    "priceWeekday": 30,
+    "priceWeekend": 45,
+    "phone": "010-5578-2394",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1440589024691615399?guests=1&adults=1&s=67&unique_share_id=053af4b3-158c-43cf-b16d-b4fc6e853afa",
+    "photos": [
+      "photos/acc18-1c.jpg"
+    ]
+  },
+  {
+    "name": "스테이눕",
+    "address": "경주시 양정로130번길 8-1",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 18,
+    "priceWeekend": 25,
+    "phone": "010-7100-0318",
+    "bookingUrl": "https://naver.me/5FmBybtf",
+    "photos": [
+      "photos/acc19-1.jpg"
+    ]
+  },
+  {
+    "name": "황오아담",
+    "address": "경주시 원효로 171, 3층",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 14,
+    "priceWeekday": 35,
+    "priceWeekend": 45,
+    "phone": "010-6545-8467",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1472927855475808915?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=2fdbec8c-04d2-49c7-8ab2-d61596cddc9a",
+    "photos": [
+      "photos/acc20-1.jpg"
+    ]
+  },
+  {
+    "name": "해야스테이",
+    "address": "경주시 원효로173번길 12-3",
+    "type": "철도관사",
+    "capacityBase": 12,
+    "capacityMax": 15,
+    "priceWeekday": 35,
+    "priceWeekend": 45,
+    "phone": "010-2842-8533",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1522211600009006016?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=8d64be1e-ffe6-4cbe-9614-f71a41de73d7",
+    "photos": [
+      "photos/acc21-1.jpg"
+    ]
+  },
+  {
+    "name": "황오다움",
+    "address": "경주시 원효로 176, 3층",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 18,
+    "priceWeekend": 25,
+    "phone": "010-4522-9683",
+    "bookingUrl": null,
+    "photos": []
+  },
+  {
+    "name": "스테이 1983",
+    "address": "경주시 원효로177번길 22-3",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 8,
+    "priceWeekday": 28,
+    "priceWeekend": 35,
+    "phone": "010-6510-2588",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1581793262479204361?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=99b34477-8efe-4bb9-a422-e0928e85b68c",
+    "photos": [
+      "photos/acc23-1.jpg"
+    ]
+  },
+  {
+    "name": "경주, 데이즈",
+    "address": "경주시 원효로 168 205호",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 4,
+    "priceWeekday": 15,
+    "priceWeekend": 20,
+    "phone": "010-5818-6133",
+    "bookingUrl": "https://naver.me/GowcOrPe",
+    "photos": [
+      "photos/acc24-1b.jpg"
+    ]
+  },
+  {
+    "name": "이다음 스테이",
+    "address": "경주시 양정로 136-13",
+    "type": "한옥",
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 14.9,
+    "priceWeekend": 19.9,
+    "phone": "010-8654-4665",
+    "bookingUrl": "https://naver.me/G0pEyvkp",
+    "photos": [
+      "photos/acc25-1.jpg"
+    ]
+  },
+  {
+    "name": "스테이 은진슈퍼",
+    "address": "경주시 양정로 134-1",
+    "type": "한옥",
+    "capacityBase": 2,
+    "capacityMax": 6,
+    "priceWeekday": 18,
+    "priceWeekend": 25,
+    "phone": "010-4517-8511",
+    "bookingUrl": "https://naver.me/G0pkX3Iv",
+    "photos": [
+      "photos/acc26-1b.jpg"
+    ]
+  },
+  {
+    "name": "호호가",
+    "address": "경주시 원효로177번길 26-12",
+    "type": null,
+    "capacityBase": 3,
+    "capacityMax": 8,
+    "priceWeekday": 25,
+    "priceWeekend": 32,
+    "phone": "010-5002-4687",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1673874538097953374?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=ababf8ae-a3a1-44ff-8e6c-15cc6e737f75",
+    "photos": [
+      "photos/acc27-1c.jpg"
+    ]
+  },
+  {
+    "name": "포실주택",
+    "address": "경주시 원효로163번길 8-3",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 8,
+    "priceWeekday": 25,
+    "priceWeekend": 35,
+    "phone": "010-9773-5412",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1719965564337388341?check_in=2026-11-18&check_out=2026-11-19&guests=1&adults=1&s=67&unique_share_id=0a48faf2-3fa0-443a-9ca8-63b1062dc5c2",
+    "photos": [
+      "photos/acc28-1c.jpg"
+    ]
+  },
+  {
+    "name": "스테이 문담",
+    "address": "경주시 양정로107번길 11-3",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 10,
+    "priceWeekday": 19,
+    "priceWeekend": 38,
+    "phone": "010-7278-0552",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1704400100347193351?guests=1&adults=1&s=67&unique_share_id=54caaf63-d287-44eb-b99f-d1f3feeba6f4",
+    "photos": [
+      "photos/acc29-1c.jpg"
+    ]
+  },
+  {
+    "name": "흐흐하우스",
+    "address": "경주시 황오동 163-39",
+    "type": null,
+    "capacityBase": 2,
+    "capacityMax": 6,
+    "priceWeekday": 20,
+    "priceWeekend": 28,
+    "phone": "010-2582-4687",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1714355794684742637?guests=1&adults=1&s=67&unique_share_id=90321a61-ec61-4127-b59a-304ab8674908",
+    "photos": [
+      "photos/acc30-1.jpg",
+      "photos/acc30-2.jpg"
+    ]
+  },
+  {
+    "name": "헤이경주",
+    "address": "경주시 양정로 150-7",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 20,
+    "priceWeekend": 28,
+    "phone": "010-8845-5822",
+    "bookingUrl": "https://naver.me/FBMG6m7W",
+    "photos": [
+      "photos/acc31-1.jpg",
+      "photos/acc31-2.jpg"
+    ]
+  },
+  {
+    "name": "스테이선재",
+    "address": "경주시 원효로163번길 37",
+    "type": null,
+    "capacityBase": 1,
+    "capacityMax": 2,
+    "priceWeekday": 15,
+    "priceWeekend": 20,
+    "phone": "010-8756-3647",
+    "bookingUrl": "https://naver.me/xLNdO31h",
+    "photos": [
+      "photos/acc32-1c.jpg"
+    ]
+  },
+  {
+    "name": "스테이 호",
+    "address": "경주시 양정로130번길 8-11",
+    "type": null,
+    "capacityBase": 4,
+    "capacityMax": 6,
+    "priceWeekday": 25,
+    "priceWeekend": 32,
+    "phone": "010-6866-3210",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1764071345075579591?unique_share_id=05d0241c-b37d-4267-aca2-46677fce381c&viralityEntryPoint=1&s=76",
+    "photos": [
+      "photos/acc33-1.jpg",
+      "photos/acc33-2.jpg"
+    ]
+  },
+  {
+    "name": "황오저택",
+    "address": "경주시 원효로177번길 30",
+    "type": "한옥",
+    "capacityBase": 4,
+    "capacityMax": 8,
+    "priceWeekday": 25,
+    "priceWeekend": 35,
+    "phone": "010-9415-6428",
+    "bookingUrl": "https://www.airbnb.co.kr/rooms/1746253579402467764?check_in=2026-11-01&check_out=2026-11-06&guests=1&adults=1&s=67&unique_share_id=e78d3a8e-90cc-4ebe-bfeb-109d18d8eb8e",
+    "photos": [
+      "photos/acc34-1.jpg"
+    ]
+  }
+];
+
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  const searchInput = document.getElementById("search");
+  const typeGroup = document.getElementById("type-group");
+  const statCount = document.getElementById("stat-count");
+
+  statCount.textContent = accommodations.length;
+
+  const typeLabel = t => t || "미정";
+  const types = ["전체", ...new Set(accommodations.map(a => typeLabel(a.type)))];
+  typeGroup.innerHTML = types.map((t, i) =>
+    `<button class="chip" data-type="${t}" aria-pressed="${i === 0 ? "true" : "false"}">${t}</button>`
+  ).join("");
+
+  let state = { q: "", type: "전체" };
+
+  function fmtWon(n){
+    return (n === null || n === undefined) ? "-" : (Number.isInteger(n) ? n : n.toFixed(1));
+  }
+
+  function photoHTML(item){
+    if(item.photos.length === 0){
+      return `<div class="card-photo empty">${roofSVG}<span class="photo-caption">사진 준비중</span><span class="type-badge">${typeLabel(item.type)}</span></div>`;
+    }
+    const imgs = item.photos.slice(0, 2).map(src => `<div class="photo-slot"><img src="${src}" alt="${item.name} 사진" loading="lazy"></div>`).join("");
+    return `<div class="card-photo">${imgs}<span class="type-badge">${typeLabel(item.type)}</span></div>`;
+  }
+
+  function cardHTML(item){
+    const bookingBtn = item.bookingUrl
+      ? `<a class="btn primary" href="${item.bookingUrl}" target="_blank" rel="noopener">예약 페이지</a>`
+      : `<span class="btn primary" style="opacity:.5; pointer-events:none;">예약 링크 준비중</span>`;
+    return `
+      <article class="card">
+        ${photoHTML(item)}
+        <div class="card-body">
+          <h3 class="card-name">${item.name}</h3>
+          <p class="card-address">${item.address || "주소 정리중"}</p>
+          <div class="fact-row">
+            <div class="fact"><span class="k">인원</span><span class="v">기준 ${item.capacityBase ?? "-"} · 최대 ${item.capacityMax ?? "-"}</span></div>
+            <div class="fact"><span class="k">요금</span><span class="v">평일 ${fmtWon(item.priceWeekday)}만 · 주말 ${fmtWon(item.priceWeekend)}만</span></div>
+          </div>
+          <div class="card-actions">
+            <a class="btn" href="tel:${item.phone}">${item.phone}</a>
+            ${bookingBtn}
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function render(){
+    const q = state.q.trim().toLowerCase();
+    const filtered = accommodations.filter(item => {
+      const matchesQ = !q || (item.name + item.address).toLowerCase().includes(q);
+      const matchesType = state.type === "전체" || typeLabel(item.type) === state.type;
+      return matchesQ && matchesType;
+    });
+    grid.innerHTML = filtered.map(cardHTML).join("");
+    empty.hidden = filtered.length !== 0;
+  }
+
+  searchInput.addEventListener("input", e => { state.q = e.target.value; render(); });
+
+  typeGroup.addEventListener("click", e => {
+    const btn = e.target.closest(".chip");
+    if(!btn) return;
+    [...typeGroup.children].forEach(c => c.setAttribute("aria-pressed", "false"));
+    btn.setAttribute("aria-pressed", "true");
+    state.type = btn.dataset.type;
+    render();
+  });
+
+  render();
+</script>
+</body>
+</html>
