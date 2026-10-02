@@ -8,7 +8,8 @@
 <meta property="og:title" content="황촌 마을호텔 숙소 안내">
 <meta property="og:description" content="경주 황오동·성동 일대 행복황촌협동조합 마을호텔 34개 숙소 안내 페이지">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70'%3E%3Cpath d='M6 52 L50 18 L94 52' stroke='%23B5502E' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 52 L50 26 L84 52' stroke='%23B5502E' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +174,17 @@
   }
   .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:10px; flex:1;}
   .card-name{font-size:1.22rem; font-weight:700;}
-  .card-address{font-size:.85rem; color:var(--text-muted); line-height:1.5;}
+  .card-address{
+    font-size:.85rem; color:var(--text-muted); line-height:1.5;
+    display:flex; align-items:center; gap:6px;
+  }
+  .map-link{
+    flex:none; display:inline-flex; align-items:center; justify-content:center;
+    width:20px; height:20px; border-radius:6px;
+    color:var(--accent-2); text-decoration:none;
+  }
+  .map-link:hover{background:var(--surface-2);}
+  .map-link svg{width:15px; height:15px;}
   .fact-row{
     display:flex; flex-wrap:wrap; gap:8px 16px;
     font-size:.85rem; color:var(--text); padding-top:2px;
@@ -265,9 +276,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 9,
-    "priceWeekday": 14,
-    "priceWeekend": 18,
-    "phone": "010-8687-0011",
+    "priceWeekday": 15,
+    "priceWeekend": 30,
+    "phone": "",
     "bookingUrl": "https://www.agoda.com/ko-kr/blueplanet/hotel/gyeongju-si-kr.html?cid=1719676&ds=e9F%2FCSQJNoMNTTU%2B",
     "photos": [
       "photos/acc03-1.jpg"
@@ -281,7 +292,7 @@
     "capacityMax": 5,
     "priceWeekday": 25,
     "priceWeekend": 25,
-    "phone": "010-3827-5259",
+    "phone": "0507-1425-5259",
     "bookingUrl": "https://naver.me/xgNI1jpj",
     "photos": [
       "photos/hwangho-yeogwan-pool.png"
@@ -295,7 +306,7 @@
     "capacityMax": 6,
     "priceWeekday": 33,
     "priceWeekend": 50,
-    "phone": "010-8707-0679",
+    "phone": "0507-1429-5366",
     "bookingUrl": "https://naver.me/xhz3um5i",
     "photos": [
       "photos/stay-hwangchon-night.png"
@@ -307,9 +318,9 @@
     "type": null,
     "capacityBase": 4,
     "capacityMax": 6,
-    "priceWeekday": 15,
-    "priceWeekend": 20,
-    "phone": "010-8570-1861",
+    "priceWeekday": 20,
+    "priceWeekend": 25,
+    "phone": "0507-1331-1861",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1625146843198668909?guests=1&adults=1&s=67&unique_share_id=cbfe8689-7049-40c6-b7de-e1d7ee70e843",
     "photos": [
       "photos/acc04-1.jpg"
@@ -321,9 +332,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 6,
-    "priceWeekday": 12,
+    "priceWeekday": 13,
     "priceWeekend": 20,
-    "phone": "010-6428-1279",
+    "phone": "0507-1442-1303",
     "bookingUrl": "https://naver.me/5eUPQrjF",
     "photos": [
       "photos/acc05-1.jpg"
@@ -335,9 +346,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 2,
-    "priceWeekday": 16,
-    "priceWeekend": 27,
-    "phone": "010-8670-0279",
+    "priceWeekday": 13,
+    "priceWeekend": 25,
+    "phone": "0507-1427-0650",
     "bookingUrl": "https://naver.me/FvEpQaJU",
     "photos": [
       "photos/acc06-1.jpg",
@@ -352,7 +363,7 @@
     "capacityMax": 4,
     "priceWeekday": 20,
     "priceWeekend": 25,
-    "phone": "010-5688-8650",
+    "phone": "0507-1396-8650",
     "bookingUrl": "https://naver.me/IGsJLCcv",
     "photos": [
       "photos/acc07-1.jpg"
@@ -366,7 +377,7 @@
     "capacityMax": 4,
     "priceWeekday": 14,
     "priceWeekend": 19,
-    "phone": "010-2628-9106",
+    "phone": "0507-1402-9106",
     "bookingUrl": "https://naver.me/FgHIfncf",
     "photos": [
       "photos/acc08-1b.jpg",
@@ -381,7 +392,7 @@
     "capacityMax": 6,
     "priceWeekday": 12,
     "priceWeekend": 27,
-    "phone": "010-2550-6540",
+    "phone": "0507-1430-6540",
     "bookingUrl": "https://naver.me/GOPEK6T3",
     "photos": [
       "photos/acc09-1c.jpg",
@@ -394,9 +405,9 @@
     "type": "한옥",
     "capacityBase": 2,
     "capacityMax": 4,
-    "priceWeekday": 34,
+    "priceWeekday": 32,
     "priceWeekend": 48,
-    "phone": "010-8263-2355",
+    "phone": "0507-1308-8590",
     "bookingUrl": "https://naver.me/FRLTDpmC",
     "photos": [
       "photos/acc10-1.jpg"
@@ -410,7 +421,7 @@
     "capacityMax": 4,
     "priceWeekday": 36,
     "priceWeekend": 42,
-    "phone": "010-9393-7374",
+    "phone": "0507-1300-6973",
     "bookingUrl": "https://naver.me/xvCUHclM",
     "photos": [
       "photos/acc11-1c.jpg"
@@ -420,11 +431,11 @@
     "name": "넥스트도어",
     "address": "경주시 양정로107번길 16",
     "type": null,
-    "capacityBase": 4,
+    "capacityBase": 2,
     "capacityMax": 8,
-    "priceWeekday": 30,
-    "priceWeekend": 40,
-    "phone": "010-6567-2868",
+    "priceWeekday": 25,
+    "priceWeekend": 30,
+    "phone": "0507-1379-7521",
     "bookingUrl": "https://naver.me/FfeF54SZ",
     "photos": [
       "photos/acc12-1.jpg"
@@ -435,10 +446,10 @@
     "address": "경주시 원효로173번길 8-1",
     "type": "철도관사",
     "capacityBase": 2,
-    "capacityMax": 2,
-    "priceWeekday": 12,
-    "priceWeekend": 18,
-    "phone": "010-4487-1287",
+    "capacityMax": 3,
+    "priceWeekday": 16,
+    "priceWeekend": 28,
+    "phone": "0507-1426-2390",
     "bookingUrl": "https://naver.me/GzE9RY9T",
     "photos": [
       "photos/acc13-1.jpg",
@@ -453,7 +464,7 @@
     "capacityMax": 6,
     "priceWeekday": 25,
     "priceWeekend": 32,
-    "phone": "010-5606-4140",
+    "phone": "",
     "bookingUrl": "https://naver.me/xIeXIkhT",
     "photos": [
       "photos/acc14-1.jpg"
@@ -467,7 +478,7 @@
     "capacityMax": 6,
     "priceWeekday": 20,
     "priceWeekend": 29,
-    "phone": "010-4516-4030",
+    "phone": "0507-1497-4030",
     "bookingUrl": "https://naver.me/G4W8wwkR",
     "photos": [
       "photos/acc15-1c.jpg"
@@ -479,9 +490,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 4,
-    "priceWeekday": 18,
-    "priceWeekend": 24,
-    "phone": "010-7572-0932",
+    "priceWeekday": 13,
+    "priceWeekend": 28,
+    "phone": "0507-1320-1546",
     "bookingUrl": "https://naver.me/5659cKpP",
     "photos": [
       "photos/acc16-1.jpg",
@@ -495,8 +506,8 @@
     "capacityBase": 2,
     "capacityMax": 5,
     "priceWeekday": 15,
-    "priceWeekend": 20,
-    "phone": "010-4649-5378",
+    "priceWeekend": 23,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1722152630386794905?check_in=2026-11-18&check_out=2026-11-19&guests=1&adults=1&s=67&unique_share_id=bd3e170e-8158-4daf-90ba-35b0be3f8e54",
     "photos": [
       "photos/acc17-1c.jpg"
@@ -509,8 +520,8 @@
     "capacityBase": 2,
     "capacityMax": 5,
     "priceWeekday": 30,
-    "priceWeekend": 45,
-    "phone": "010-5578-2394",
+    "priceWeekend": 44,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1440589024691615399?guests=1&adults=1&s=67&unique_share_id=053af4b3-158c-43cf-b16d-b4fc6e853afa",
     "photos": [
       "photos/acc18-1c.jpg"
@@ -521,10 +532,10 @@
     "address": "경주시 양정로130번길 8-1",
     "type": null,
     "capacityBase": 2,
-    "capacityMax": 4,
-    "priceWeekday": 18,
-    "priceWeekend": 25,
-    "phone": "010-7100-0318",
+    "capacityMax": 5,
+    "priceWeekday": 16,
+    "priceWeekend": 19,
+    "phone": "0507-1489-6226",
     "bookingUrl": "https://naver.me/5FmBybtf",
     "photos": [
       "photos/acc19-1.jpg"
@@ -535,10 +546,10 @@
     "address": "경주시 원효로 171, 3층",
     "type": null,
     "capacityBase": 4,
-    "capacityMax": 14,
-    "priceWeekday": 35,
+    "capacityMax": 13,
+    "priceWeekday": 18,
     "priceWeekend": 45,
-    "phone": "010-6545-8467",
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1472927855475808915?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=2fdbec8c-04d2-49c7-8ab2-d61596cddc9a",
     "photos": [
       "photos/acc20-1.jpg"
@@ -550,9 +561,9 @@
     "type": "철도관사",
     "capacityBase": 12,
     "capacityMax": 15,
-    "priceWeekday": 35,
-    "priceWeekend": 45,
-    "phone": "010-2842-8533",
+    "priceWeekday": 45,
+    "priceWeekend": 62,
+    "phone": "0507-1407-8533",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1522211600009006016?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=8d64be1e-ffe6-4cbe-9614-f71a41de73d7",
     "photos": [
       "photos/acc21-1.jpg"
@@ -566,7 +577,7 @@
     "capacityMax": 4,
     "priceWeekday": 18,
     "priceWeekend": 25,
-    "phone": "010-4522-9683",
+    "phone": "",
     "bookingUrl": null,
     "photos": []
   },
@@ -576,9 +587,9 @@
     "type": null,
     "capacityBase": 4,
     "capacityMax": 8,
-    "priceWeekday": 28,
-    "priceWeekend": 35,
-    "phone": "010-6510-2588",
+    "priceWeekday": 25,
+    "priceWeekend": 30,
+    "phone": "0507-1371-2590",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1581793262479204361?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=99b34477-8efe-4bb9-a422-e0928e85b68c",
     "photos": [
       "photos/acc23-1.jpg"
@@ -590,9 +601,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 4,
-    "priceWeekday": 15,
-    "priceWeekend": 20,
-    "phone": "010-5818-6133",
+    "priceWeekday": 8,
+    "priceWeekend": 18,
+    "phone": "0507-1353-6133",
     "bookingUrl": "https://naver.me/GowcOrPe",
     "photos": [
       "photos/acc24-1b.jpg"
@@ -604,9 +615,9 @@
     "type": "한옥",
     "capacityBase": 4,
     "capacityMax": 6,
-    "priceWeekday": 14.9,
-    "priceWeekend": 19.9,
-    "phone": "010-8654-4665",
+    "priceWeekday": 14,
+    "priceWeekend": 25,
+    "phone": "",
     "bookingUrl": "https://naver.me/G0pEyvkp",
     "photos": [
       "photos/acc25-1.jpg"
@@ -618,9 +629,9 @@
     "type": "한옥",
     "capacityBase": 2,
     "capacityMax": 6,
-    "priceWeekday": 18,
+    "priceWeekday": 15,
     "priceWeekend": 25,
-    "phone": "010-4517-8511",
+    "phone": "0507-1390-8590",
     "bookingUrl": "https://naver.me/G0pkX3Iv",
     "photos": [
       "photos/acc26-1b.jpg"
@@ -632,9 +643,9 @@
     "type": null,
     "capacityBase": 3,
     "capacityMax": 8,
-    "priceWeekday": 25,
-    "priceWeekend": 32,
-    "phone": "010-5002-4687",
+    "priceWeekday": 20,
+    "priceWeekend": 35,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1673874538097953374?check_in=2026-09-22&check_out=2026-09-23&guests=1&adults=1&s=67&unique_share_id=ababf8ae-a3a1-44ff-8e6c-15cc6e737f75",
     "photos": [
       "photos/acc27-1c.jpg"
@@ -646,9 +657,9 @@
     "type": null,
     "capacityBase": 4,
     "capacityMax": 8,
-    "priceWeekday": 25,
-    "priceWeekend": 35,
-    "phone": "010-9773-5412",
+    "priceWeekday": 15,
+    "priceWeekend": 28,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1719965564337388341?check_in=2026-11-18&check_out=2026-11-19&guests=1&adults=1&s=67&unique_share_id=0a48faf2-3fa0-443a-9ca8-63b1062dc5c2",
     "photos": [
       "photos/acc28-1c.jpg"
@@ -658,11 +669,11 @@
     "name": "스테이 문담",
     "address": "경주시 양정로107번길 11-3",
     "type": null,
-    "capacityBase": 2,
+    "capacityBase": 4,
     "capacityMax": 10,
-    "priceWeekday": 19,
+    "priceWeekday": 20,
     "priceWeekend": 38,
-    "phone": "010-7278-0552",
+    "phone": "0507-1452-0552",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1704400100347193351?guests=1&adults=1&s=67&unique_share_id=54caaf63-d287-44eb-b99f-d1f3feeba6f4",
     "photos": [
       "photos/acc29-1c.jpg"
@@ -674,9 +685,9 @@
     "type": null,
     "capacityBase": 2,
     "capacityMax": 6,
-    "priceWeekday": 20,
-    "priceWeekend": 28,
-    "phone": "010-2582-4687",
+    "priceWeekday": 17,
+    "priceWeekend": 26,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1714355794684742637?guests=1&adults=1&s=67&unique_share_id=90321a61-ec61-4127-b59a-304ab8674908",
     "photos": [
       "photos/acc30-1.jpg",
@@ -690,8 +701,8 @@
     "capacityBase": 4,
     "capacityMax": 6,
     "priceWeekday": 20,
-    "priceWeekend": 28,
-    "phone": "010-8845-5822",
+    "priceWeekend": 47,
+    "phone": "0507-1353-5822",
     "bookingUrl": "https://naver.me/FBMG6m7W",
     "photos": [
       "photos/acc31-1.jpg",
@@ -702,11 +713,11 @@
     "name": "스테이선재",
     "address": "경주시 원효로163번길 37",
     "type": null,
-    "capacityBase": 1,
-    "capacityMax": 2,
-    "priceWeekday": 15,
-    "priceWeekend": 20,
-    "phone": "010-8756-3647",
+    "capacityBase": 4,
+    "capacityMax": 10,
+    "priceWeekday": 23,
+    "priceWeekend": 37,
+    "phone": "0507-1343-3647",
     "bookingUrl": "https://naver.me/xLNdO31h",
     "photos": [
       "photos/acc32-1c.jpg"
@@ -717,10 +728,10 @@
     "address": "경주시 양정로130번길 8-11",
     "type": null,
     "capacityBase": 4,
-    "capacityMax": 6,
-    "priceWeekday": 25,
-    "priceWeekend": 32,
-    "phone": "010-6866-3210",
+    "capacityMax": 8,
+    "priceWeekday": 22,
+    "priceWeekend": 43,
+    "phone": "0507-1454-3210",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1764071345075579591?unique_share_id=05d0241c-b37d-4267-aca2-46677fce381c&viralityEntryPoint=1&s=76",
     "photos": [
       "photos/acc33-1.jpg",
@@ -732,10 +743,10 @@
     "address": "경주시 원효로177번길 30",
     "type": "한옥",
     "capacityBase": 4,
-    "capacityMax": 8,
-    "priceWeekday": 25,
-    "priceWeekend": 35,
-    "phone": "010-9415-6428",
+    "capacityMax": 10,
+    "priceWeekday": 34,
+    "priceWeekend": 42,
+    "phone": "",
     "bookingUrl": "https://www.airbnb.co.kr/rooms/1746253579402467764?check_in=2026-11-01&check_out=2026-11-06&guests=1&adults=1&s=67&unique_share_id=e78d3a8e-90cc-4ebe-bfeb-109d18d8eb8e",
     "photos": [
       "photos/acc34-1.jpg"
@@ -780,13 +791,18 @@
         ${photoHTML(item)}
         <div class="card-body">
           <h3 class="card-name">${item.name}</h3>
-          <p class="card-address">${item.address || "주소 정리중"}</p>
+          <p class="card-address">
+            <span>${item.address || "주소 정리중"}</span>
+            ${item.address ? `<a class="map-link" href="https://map.naver.com/p/search/${encodeURIComponent(item.address)}" target="_blank" rel="noopener" aria-label="네이버 지도에서 길찾기">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </a>` : ''}
+          </p>
           <div class="fact-row">
             <div class="fact"><span class="k">인원</span><span class="v">기준 ${item.capacityBase ?? "-"} · 최대 ${item.capacityMax ?? "-"}</span></div>
             <div class="fact"><span class="k">요금</span><span class="v">평일 ${fmtWon(item.priceWeekday)}만 · 주말 ${fmtWon(item.priceWeekend)}만</span></div>
           </div>
           <div class="card-actions">
-            <a class="btn" href="tel:${item.phone}">${item.phone}</a>
+            ${item.phone ? `<a class="btn" href="tel:${item.phone}">${item.phone}</a>` : ''}
             ${bookingBtn}
           </div>
         </div>
