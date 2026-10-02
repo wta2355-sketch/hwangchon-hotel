@@ -81,6 +81,17 @@
   .brand-logo{
     width:56px; height:auto; margin-bottom:2px;
   }
+  .coop-info{
+    display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px;
+  }
+  .coop-contact{
+    font-size:.85rem; color:var(--text-muted); text-decoration:none;
+  }
+  .coop-contact:hover{color:var(--accent);}
+  .coop-address{
+    font-size:.85rem; color:var(--text-muted);
+    display:inline-flex; align-items:center; gap:4px;
+  }
   .eyebrow{
     font-size:.8rem; font-weight:600; letter-spacing:.08em;
     color:var(--accent-2); text-transform:uppercase;
@@ -230,6 +241,15 @@
   <header class="page-head">
     <img class="brand-logo" src="logo.png" alt="행복황촌 로고">
     <span class="eyebrow">행복황촌협동조합 · 마을호텔</span>
+    <div class="coop-info">
+      <a class="coop-contact" href="tel:054-776-8640">☎ 협동조합 문의 054-776-8640</a>
+      <span class="coop-address">
+        경주시 양정로 122-1
+        <a class="map-link" href="https://map.naver.com/p/search/%EA%B2%BD%EC%A3%BC%EC%8B%9C%20%EC%96%91%EC%A0%95%EB%A1%9C%20122-1" target="_blank" rel="noopener" aria-label="네이버 지도에서 길찾기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </span>
+    </div>
     <h1>황촌 마을호텔 숙소 안내</h1>
     <p class="subtitle">구.경주역 황오동·성동동 골목 곳곳에 흩어진 집들이 하나의 호텔처럼 이어집니다. 조합원이 직접 운영하는 각기 다른 매력의 숙소들을 소개합니다.</p>
     <div class="stat-row">
